@@ -1,0 +1,61 @@
+# Laravel Playground
+copy from forked docker example to learn laravel
+https://github.com/kraftartberlin-micha/laravel-docker-examples-fork
+
+# Install
+## Prepare env
+```bash
+mv .env .env.backup
+cp .env.example .env 
+```
+### Hint
+Adjust the UID and GID variables in the .env file to match your user ID and group ID. You can find these by running id -u and id -g in the terminal.
+
+## Init app
+```bash
+make init
+docker compose -f compose.dev.yaml exec workspace bash
+composer install
+npm install
+npm run dev
+```
+
+# Run
+## Open browser
+http://localhost/
+
+### Hint
+If you see 502 Error, just wait for full startup
+
+# Dev
+## create fake data
+drop/recreate database, call migrationscript and dataseeder 
+```
+make fresh-seed
+```
+
+## dumping variables
+### dump
+```
+dump($var);
+```
+### dump and die
+```
+dd($var);
+```
+## route handling
+routes are used in/after bootstrapping and preparing services.
+
+you can define route with views, controllers/actions or closures
+
+### list all routes
+```make routelist```
+
+
+# next tasks
+- ..
+
+thanks to
+
+devtamin - laravel 12 crud with vue course
+https://www.youtube.com/watch?v=9zqgnlHNz44
