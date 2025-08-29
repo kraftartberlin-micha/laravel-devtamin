@@ -1,6 +1,7 @@
 # Laravel Playground
 copy from forked docker example to learn laravel
 https://github.com/kraftartberlin-micha/laravel-docker-examples-fork
+with Laravel + Vue Starter Kit from https://github.com/laravel/vue-starter-kit
 
 # Install
 ## Prepare env
